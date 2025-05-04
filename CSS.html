@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS tasks</title>
     <style>
+      body{
+        margin: 20px;
+      }
         #table1 {
             border-collapse: separate;
             background-color: lightblue;
@@ -55,44 +58,48 @@
         .oval{ 
             border-radius: 50%; 
         }
-        .vnav {
-    padding: 10px;
-    width:25%;
-    border:1px solid black;
-    background-color: lightblue;
-    a{
-        color: darkblue;
-        text-decoration: none;
-    }
-    #home{
-        background-color: orange;
-        color: white;
-    }
-}
 
-.hnav{
-    padding: 10px;
-    width:fit-content;
-    border:1px solid black;
-    background-color: darkgrey;
-    overflow: hidden;
-    a{
-        float:left;
-        display: block;
-        color: darkblue;
-        padding: 12px 20px;
-        text-align: center;
-        text-decoration: none;
-        border-left: blue solid 1px;
-    }
-    #home{
-        background-color: grey;
-        color:white;
-    }
-}
+        .vnav {
+            width: 200px;
+            border: 1px solid black;
+            background-color: lightblue;
+        }
+        .vnav a {
+            display: block;
+            color: darkblue;
+            text-decoration: none;
+            padding: 12px 16px;
+            font-size: 18px;
+        }
+        .vnav a:hover {
+            background-color: orange;
+            color: white;
+        }
+        .hnav {
+            display: flex;
+            border: 1px solid black;
+            background-color: lightgray;
+            width: fit-content;
+        }
+        .hnav a {
+            display: block;
+            color: darkblue;
+            text-decoration: none;
+            padding: 12px 20px;
+            text-align: center;
+            border-left: 1px solid blue;
+            font-size: 18px;
+        }
+        .hnav a:first-child {
+            border-left: none;
+        }
+        .hnav a:hover {
+            background-color: grey;
+            color: white;
+        }
 
 .companyTable{
-    padding: 6px;;
+    padding: 6px;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
@@ -110,52 +117,58 @@
         background-color: white;
     }
     #odd{
-        background-color: darkgray;
+        background-color: #ddd;
     }
 }
 
   
-  .container {
-    width: 100vw;
-    height: 50vh;
-    border: 2px solid black;
-    box-sizing: border-box;
-    display: flex;
-  }
-  
-  .sidenav {
-    width: 60px;
-    
-    background-color: #f1f1f1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 20px;
-  }
-  
-  .sidenav a {
-    padding: 15px 10px;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-    width: 100%;
-    transition: 0.3s;
-    white-space: nowrap;
-  }
-  
-  .sidenav a.green { background-color: #04AA6D; }
-  .sidenav a.blue { background-color: #2196F3; }
-  .sidenav a.red { background-color: #f44336; }
-  .sidenav a.gray { background-color: #555; }
-  
-  .sidenav a:hover {
-    width: 200px;
-  }
-  
-  .main {
-    flex-grow: 1;
-    padding: 20px;
-  }
+.sidenav-container {
+  width: 55%;
+  height: 250px;
+  border: 1px solid black;
+  display: flex;
+  margin: auto;
+}
+
+.hover-sidenav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav-link {
+  position: relative;
+  left: 0;
+  padding: 20px 0;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.sidenav-link.green { background-color: #04AA6D; }
+.sidenav-link.blue { background-color: #2196F3; }
+.sidenav-link.red { background-color: #f44336; }
+.sidenav-link.gray { background-color: #555; }
+
+.sidenav-link:hover {
+  width: 200px;
+  font-size: 18px;
+  padding-left: 20px;
+  text-align: left;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.main {
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+  margin-top: 0;
+}
+
   
   
   .login-container {
@@ -266,7 +279,12 @@
     color: #330066;
     text-decoration: none;
     font-weight: bold;
-    border-left: 10px solid black;
+    border-right: 10px solid black;
+  }
+
+  .navbar a:hover{
+    background-color: #ddd;
+    border: none;
   }
   
   .main-content {
@@ -279,12 +297,13 @@
   
   .footer {
     font-style: italic;
-    color: #666;
+    color: #990066;
   }
 
     </style>
 </head>
 <body>
+  <h1 style="color: darkblue;">Task 1</h1>
     <table id="table1" align="center">
         <tr>
             <th class="th1">Firstname</th>
@@ -326,23 +345,29 @@
         </tr>
       </table>
 
+      <br><hr><br>
+
+      <h1 style="color: darkblue;">Task 2</h1>
       <header><h3>Vertical Navigation Bar</h3></header>
     <div class="vnav">
-        <div id="home"><a  href="#" id="home">Home</a><br></div>
-        <a href="#">Java</a><br>
-        <a href="#">CSS</a><br>
-        <a href="#">HTML</a><br>
-        <a href="#">Bootstrap</a><br>
-    </div>
-    <br>
-    <div class="hnav">
-        <a  href="#" id="home">Home</a>
+        <a href="#">Home</a>
         <a href="#">Java</a>
         <a href="#">CSS</a>
         <a href="#">HTML</a>
-        <a href="#">    </a>
+        <a href="#">Bootstrap</a>
     </div>
     <br>
+    <header><h3>Horizontal Navigation Bar</h3></header>
+    <div class="hnav">
+        <a href="#">Home</a>
+        <a href="#">Java</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+    </div>
+    
+    <br><hr><br>
+
+    <h1 style="color: darkblue;">Task 3</h1>
     <table class="companyTable">
         <thead>
             <tr>
@@ -393,21 +418,28 @@
                 <td>Italy</td>
             </tr>
     </table>
-    <br><br>
-    <div class="container">
-        <div class="sidenav">
-          <a href="#" class="green">Green</a>
-          <a href="#" class="blue">Blue</a>
-          <a href="#" class="red">Red</a>
-          <a href="#" class="gray">Gray</a>
-        </div>
-      
-        <div class="main">
-          <h2>Hoverable Sidenav Buttons</h2>
-          <p>Hover over the buttons in the left side navigation to open them.</p>
-        </div>
-      </div> 
-        <br><br>
+
+    <br><hr><br>
+
+    <h1 style="color: darkblue;">Task 4</h1>
+<div class="sidenav-container">
+  <div class="hover-sidenav">
+    <a href="#" class="sidenav-link green">Home</a>
+    <a href="#" class="sidenav-link blue">Links</a>
+    <a href="#" class="sidenav-link red">About Us</a>
+    <a href="#" class="sidenav-link gray">Contact US</a>
+  </div>
+
+  <div class="main">
+    <h2>Hoverable Sidenav Buttons</h2>
+    <p>Hover over the buttons in the left side navigation to open them.</p>
+  </div>
+</div>
+
+
+        <br><hr><br>
+
+    <h1 style="color: darkblue;">Task 5</h1>
       <div class="login-container">
         <form class="login-form">
           <div class="avatar">
@@ -431,8 +463,11 @@
             <span class="psw"><a href="#">Forgot password?</a></span>
           </div>
         </form>
-      </div>  
-        <br><br>
+      </div> 
+
+        <br><hr><br>
+
+    <h1 style="color: darkblue;">Task 6</h1>
         <div class="container">
             <ul class="navbar">
               <li><a href="#">Home page</a></li>
