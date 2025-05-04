@@ -2,95 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Assignments</title>
     <style>
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 20px;
         }
-        
-       
-        .container {
-            max-width: 800px;
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        table {
             margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
+            background-color: #ffffff;
+            border-collapse: collapse;
+            width: 70%;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
-        
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 16px;
+            text-align: left;
+            font-size: 16px;
         }
-        
-        
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        li {
-            margin-bottom: 15px;
-            transition: transform 0.2s;
-        }
-        
-        li:hover {
-            transform: translateX(5px);
-        }
-        
-       
-        a {
-            display: block;
-            padding: 12px 20px;
+
+        th {
             background-color: #3498db;
             color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-weight: 500;
         }
-        
-        a:hover {
+
+        button {
+            background-color: #3498db;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
             background-color: #2980b9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
         }
-        
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            a {
-                padding: 10px 15px;
-            }
+
+        button a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Assignments</h1>
-        <ul>
-            <li><a href="HTML.html">HTML assignment</a></li>
-            <li><a href="CSS.html">CSS assignment</a></li>
-            <li><a href="bootstrap.html">Bootstrap assignment</a></li>
-        </ul>
-    </div>
+    <h1>Assignments</h1>
+    <table>
+        <tr>
+            <th>Assignment Name</th>
+            <th>Open</th>
+        </tr>
+        <tr>
+            <td>HTML Assignment</td>
+            <td><button><a href="HTML.html">View</a></button></td>
+        </tr>
+        <tr>
+            <td>CSS Assignment</td>
+            <td><button><a href="CSS.html">View</a></button></td>
+        </tr>
+        <tr>
+            <td>Bootstrap Assignment</td>
+            <td><button><a href="bootstrap.html">View</a></button></td>
+        </tr>
+    </table>
 </body>
 </html>
